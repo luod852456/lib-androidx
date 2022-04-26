@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //api 'org.greenrobot:eventbus:3.0.0'
+    api files('libs\\event-bus-3.2.0-1.0.aar')
+    //implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    api files('libs\\pickview-4.1.9.aar')
+    api files('libs\\wheelview-4.1.9.aar')
+    //implementation 'com.jacktuotuo.customview:verificationcodeview:1.0.5'
+    api files('libs\\verification-view-1.0.5.aar')
+    //implementation 'com.github.lihangleo2:ShadowLayout:3.2.0'
+    api files('libs\\shadowLibrary-3.2.0.aar')
+    //implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    //implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'
+    api files('libs\\refresh-footer-1.1.0.aar')
+    api files('libs\\refresh-header-1.1.0.aar')
+    api files('libs\\refresh-layout-1.1.0.aar')
+    //implementation 'com.youth.banner:banner:1.4.10'
+    api files('libs\\banner-1.14.10.aar')
+    //implementation ''com.github.huburt-Hu:NewbieGuide:v2.4.4'
+    api files('libs\\NewbieGuide-2.4.4.aar')
+}
